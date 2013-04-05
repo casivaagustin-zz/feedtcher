@@ -2,7 +2,7 @@
 
 namespace Feedtcher;
 
-class ParserAtom extends ParseBase {
+class ParserAtom extends ParserBase {
 
   /**
    * Parse a Atom Feed

@@ -1,5 +1,7 @@
 <?php
 
+namespace Feedtcher;
+
 class Entry {
   
   /**
@@ -14,8 +16,8 @@ class Entry {
   public function __construct($title, $description, $author, $date, $link) {
     $this->title = $title;
     $this->description = $description;
-    $this->author = $author;
-    $this->date = $date;
+    $this->author = $author?$author:'';
+    $this->date = strtotime($date);
     $this->link = $link;
   }
 

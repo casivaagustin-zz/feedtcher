@@ -2,7 +2,7 @@
 
 namespace Feedtcher;
 
-use PHRequests;
+use PHRequests\PHRequests;
 
 class Feedtcher {
 

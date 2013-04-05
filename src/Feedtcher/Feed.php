@@ -2,7 +2,7 @@
 
 namespace Feedtcher;
 
-class Feed implements \ArrayAccess \Iterator {
+class Feed implements \ArrayAccess, \Iterator {
 
   private $position = 0;
   private $collection = array();

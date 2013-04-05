@@ -10,7 +10,7 @@ class Parser {
    * @param String $feedData : Feed Content
    */
   public function __construct($feedData) {
-    $this->feed = simplexml_load_string($feedData);
+    $this->feed = new \SimpleXMLElement($feedData);
     $this->setParser($this->feed->getName());
   }
 
@@ -34,10 +34,10 @@ class Parser {
   protected function setParser($feedRoot) {
     switch (strtolower($feedRoot)) {
       case 'rss':
-        $this->parser = new ParseRss($this->feed);
+        $this->parser = new ParserRss($this->feed);
         break;
       case 'feed':
-        $this->parser = new ParseAtom($this->feed);
+        $this->parser = new ParserAtom($this->feed);
         break;
       default:
         throw new Exception('Not a valid Feed');

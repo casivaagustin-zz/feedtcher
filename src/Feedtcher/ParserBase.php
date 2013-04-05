@@ -1,14 +1,16 @@
 <?php
 
-class ParseBase {
+namespace Feedtcher;
+
+class ParserBase {
 
   /**
    * Creates a new instance of a Parser
    * 
    * @param SimpleXmlElement $content 
    */
-  public function __construct($content) {
-    $this->content = $content;
+  public function __construct($feedContent) {
+    $this->feed = $feedContent;
   }
 
   public function parse() {
