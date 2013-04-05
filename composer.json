@@ -1,0 +1,22 @@
+{
+    "name": "casivaagustin/feedtcher",
+    "description": "Gets ATOM and RSS Feeds",
+    "keywords": ["REST", "Http", "Curl", "RSS", "ATOM"],
+    "homepage": "https://github.com/casivaagustin/feedtcher",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Casiva Agustin",
+            "email": "casivaagustin@gmail.com",
+            "homepage": "http://casivaagustin.com.ar"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.1",
+        "casivaagustin/phrequests": "dev-master"
+    },
+    "autoload": {
+            "psr-0": { "feedtcher": "src/" }
+    }
+}
