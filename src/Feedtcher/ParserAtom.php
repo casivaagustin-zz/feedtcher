@@ -11,7 +11,7 @@ class ParserAtom extends ParserBase {
   public function parse() {
     $channel = $this->feed;  
     $entries = $this->feed->entry;
-    $feed = new Feed($channel->title, $channel->subtitle, $channel->link, $channel->updated); 
+    $feed = new Feed($channel->title, $channel->subtitle, $channel->link, $channel->updated, $this->getRawData()); 
     foreach($entries as $entry) {
       $entry = new Entry($entry->title, $entry->description, $entry->author, $entry->updated, $entry->link);
       $feed[] = $entry;

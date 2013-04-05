@@ -9,12 +9,17 @@ class ParserBase {
    * 
    * @param SimpleXmlElement $content 
    */
-  public function __construct($feedContent) {
+  public function __construct($feedContent, $rawData) {
     $this->feed = $feedContent;
+    $this->rawData = $rawData;
   }
 
   public function parse() {
     throw new Exception('Not implemented');
+  }
+
+  public function getRawData() {
+    return $this->rawData;
   }
   
 }

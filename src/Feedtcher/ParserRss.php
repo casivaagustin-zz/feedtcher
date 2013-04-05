@@ -12,7 +12,7 @@ class ParserRss extends ParserBase {
   public function parse() {
     $channel = $this->feed->channel;  
     $entries = $this->feed->channel->item;
-    $feed = new Feed($channel->title, $channel->description, $channel->link, $channel->pubDate); 
+    $feed = new Feed($channel->title, $channel->description, $channel->link, $channel->pubDate, $this->getRawData()); 
     foreach($entries as $entry) {
       $entry = new Entry($entry->title, $entry->description, $entry->author, $entry->pubDate, $entry->link);
       $feed[] = $entry;

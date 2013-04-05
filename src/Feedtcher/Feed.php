@@ -7,13 +7,18 @@ class Feed implements \ArrayAccess, \Iterator {
   private $position = 0;
   private $collection = array();
 
-  public function __construct($title, $description, $link, $update){
+  public function __construct($title, $description, $link, $update, $rawData){
     $this->position = 0;
     $this->collection = array();
     $this->title = $title;
     $this->description = $description;
     $this->link = $link;
     $this->update = $update;
+    $this->rawData = $rawData;
+  }
+  
+  public function getHash(){
+    return md5($this->rawData);
   }
 
   public function __get($name) {

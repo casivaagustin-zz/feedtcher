@@ -14,10 +14,11 @@ class Entry {
    * @param type $link
    */
   public function __construct($title, $description, $author, $date, $link) {
+    $date = strtotime($date); 
     $this->title = $title;
     $this->description = $description;
     $this->author = $author?$author:'';
-    $this->date = strtotime($date);
+    $this->date = $date?$date:time();
     $this->link = $link;
   }
 

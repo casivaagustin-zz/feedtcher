@@ -10,8 +10,11 @@ class Parser {
    * @param String $feedData : Feed Content
    */
   public function __construct($feedData) {
+    libxml_use_internal_errors(true);
+    $this->rawData = $feedData;
     $this->feed = new \SimpleXMLElement($feedData);
     $this->setParser($this->feed->getName());
+    libxml_use_internal_errors(false);
   }
 
   /**
@@ -34,13 +37,13 @@ class Parser {
   protected function setParser($feedRoot) {
     switch (strtolower($feedRoot)) {
       case 'rss':
-        $this->parser = new ParserRss($this->feed);
+        $this->parser = new ParserRss($this->feed, $this->rawData);
         break;
       case 'feed':
-        $this->parser = new ParserAtom($this->feed);
+        $this->parser = new ParserAtom($this->feed, $this->rawData);
         break;
       default:
-        throw new Exception('Not a valid Feed');
+        throw new \Exception('Not a valid Feed');
     }
   }
 
