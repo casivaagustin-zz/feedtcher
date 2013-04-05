@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Simple librarary to fetch Feeds ATOM or RSS.
+ * 
+ * @author Casiva Agustin <casivagustin@gmail.com> 
+ * 
+ */
 namespace Feedtcher;
 
 use PHRequests\PHRequests;

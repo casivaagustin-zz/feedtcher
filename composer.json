@@ -17,6 +17,6 @@
         "casivaagustin/phrequests": "dev-master"
     },
     "autoload": {
-            "psr-0": { "feedtcher": "src/" }
+            "psr-0": { "Feedtcher": "src/" }
     }
 }
