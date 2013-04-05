@@ -18,4 +18,4 @@ phpunit from there.
 
   $phpunit
 
-Thats it.
+That is all folks.
