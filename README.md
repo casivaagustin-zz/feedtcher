@@ -1,7 +1,7 @@
 Feedtcher
 =========
 
-Library to feetch RSS or ATOM Feeds
+Library for fetch RSS and ATOM Feeds
 
 How to use it
 =============
