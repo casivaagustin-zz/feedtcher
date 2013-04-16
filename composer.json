@@ -15,7 +15,8 @@
     ],
     "require": {
         "php": ">=5.3.1",
-        "casivaagustin/phrequests": "dev-master"
+        "casivaagustin/phrequests": "dev-master",
+        "ezyang/htmlpurifier": "dev-master"
     },
     "autoload": {
             "psr-0": { "Feedtcher": "src/" }
