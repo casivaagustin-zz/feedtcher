@@ -7,14 +7,13 @@ How to use it
 =============
 
 Just add this library to your composer.json, or set the paths for your autoloader.
-Add PHRequests as dependency also.
+Add PHRequests and HTML Purifier as dependency also.
 
 And just do something like this in your code.
 
 ```php
     $url = 'http://casivaagustin.com.ar/?feed=rss2'; 
-    $feedtcher = new Feedtcher\Feedtcher($url);
-    $feed = $feedtcher->fetch();
+    $feed = Feedtcher\Feedtcher::fetch($url);
 ```
 
 This will return a Feed Object with a collection of Entries. Feed does not
