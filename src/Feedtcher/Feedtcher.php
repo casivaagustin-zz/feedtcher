@@ -37,7 +37,7 @@ class Feedtcher {
    * 
    * @return \Feedtcher\Feedtcher\Feed
    */
-  public static function fectch($url) {
+  public static function fetch($url) {
     $feedtech = new Feedtcher($url);
     return $feedtech->doFetch();
   }
