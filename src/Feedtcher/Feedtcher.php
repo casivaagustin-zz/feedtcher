@@ -25,20 +25,24 @@ class Feedtcher {
    */
   public function doFetch() {
     $content = PHRequests::get($this->url);
-    $parser = new Parser($content);
-    $feed = $parser->parse();
-    return $feed;
+    return $this->load($content);
   }
  
   /**
-   * Wrapper to feetch feeds
+   * Wrapper to fetch feeds
    * 
    * @param String $url
    * 
-   * @return \Feedtcher\Feedtcher\Feed
+   * @return \Feedtcher\Feed
    */
   public static function fetch($url) {
     $feedtech = new Feedtcher($url);
     return $feedtech->doFetch();
+  }
+
+  public function load($content) {
+    $parser = new Parser($content);
+    $feed = $parser->parse();
+    return $feed;
   }
 }

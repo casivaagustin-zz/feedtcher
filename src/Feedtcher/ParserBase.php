@@ -6,8 +6,11 @@ class ParserBase {
 
   /**
    * Creates a new instance of a Parser
-   * 
-   * @param SimpleXmlElement $content 
+   *
+   * @param $feedContent
+   * @param $rawData
+   *
+   * @internal param \Feedtcher\SimpleXmlElement $content
    */
   public function __construct($feedContent, $rawData) {
     $this->feed = $feedContent;

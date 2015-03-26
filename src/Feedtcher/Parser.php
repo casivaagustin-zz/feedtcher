@@ -29,10 +29,10 @@ class Parser {
   /**
    * Sets the concrete parser to use depending on the root element
    * of the feed.
-   * 
+   *
    * @param String $feedRoot
-   * 
-   * @throws Exception : In case of a not valid name
+   *
+   * @throws \Exception : In case of a not valid name
    */
   protected function setParser($feedRoot) {
     switch (strtolower($feedRoot)) {
