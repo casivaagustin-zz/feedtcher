@@ -70,4 +70,8 @@ class Feed implements \ArrayAccess, \Iterator {
     return isset($this->collection[$this->position]);
   }
 
+  public function hasItems() {
+    return (count($this->collection) > 0) ? true : false;
+  }
+
 }
