@@ -25,7 +25,7 @@ class Feedtcher {
    */
   public function doFetch() {
     $content = PHRequests::get($this->url);
-    return $this->load($content);
+    return $this->load($content->content);
   }
  
   /**
